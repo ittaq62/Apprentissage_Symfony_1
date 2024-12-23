@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="mb-4">Créer un nouvel article</h1>
+
+    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+        <div class="mb-3">
+            {{ form_label(form.titre) }}
+            {{ form_widget(form.titre) }}
+            {{ form_errors(form.titre) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.texte) }}
+            {{ form_widget(form.texte) }}
+            {{ form_errors(form.texte) }}
+        </div>
+
+        <div class="form-check mb-3">
+            {{ form_widget(form.publie) }}
+            {{ form_label(form.publie) }}
+            {{ form_errors(form.publie) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.date) }}
+            {{ form_widget(form.date) }}
+            {{ form_errors(form.date) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.image) }}
+            {{ form_widget(form.image) }}
+            {{ form_errors(form.image) }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Créer</button>
+    {{ form_end(form) }}
+{% endblock %}

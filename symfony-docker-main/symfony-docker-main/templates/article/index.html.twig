@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un nouvel article{% endblock %}
+
+{% block body %}
+    <div class="container-fluid px-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="mb-3">Créer un nouvel article</h3>
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <button class="btn btn-primary" type="submit">Créer l'article</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

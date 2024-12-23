@@ -1,0 +1,10 @@
+security:
+    firewalls:
+        main:
+            form_login:
+                login_path: app_login
+                check_path: app_login
+
+    access_control:
+        - { path: ^/article/creer, roles: ROLE_ADMIN }
+        - { path: ^/article, roles: IS_AUTHENTICATED_FULLY }

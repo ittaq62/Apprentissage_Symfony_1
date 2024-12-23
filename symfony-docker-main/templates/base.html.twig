@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body class="sb-nav-fixed">
+
+    <!-- Navbar -->
+    {% include 'navbar.html.twig' %}
+
+    <div id="layoutSidenav">
+        <!-- Sidebar -->
+        {% include 'sidebar.html.twig' %}
+
+        <!-- Main Content Area -->
+        <div id="layoutSidenav_content">
+            <main>
+                {% block body %}{% endblock %}
+            </main>
+            <!-- Footer -->
+            {% include 'footer.html.twig' %}
+        </div>
+    </div>
+
+</body>
+</html>
