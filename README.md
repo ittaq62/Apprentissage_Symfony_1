@@ -1,5 +1,11 @@
 # Apprentissage_Symfony_1
 
+> **Note :** Ce fichier est une backup du projet. À la suite d’un problème avec Git qui a supprimé l’ensemble des fichiers, il est possible que certains codes ne fonctionnent pas correctement. Vous devrez peut-être refaire une migration pour restaurer les tables nécessaires dans la base de données. Pour ce faire, exécutez les commandes suivantes :  
+> ```bash
+> php bin/console doctrine:migrations:migrate
+> composer require symfony/mime
+> ```
+
 ## Gestion des Rôles Utilisateur
 
 Ce projet configure automatiquement les utilisateurs nouvellement créés avec le rôle "USER". Pour promouvoir un utilisateur au rôle "ADMIN", suivez les étapes ci-dessous.
